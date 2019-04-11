@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".WeatherForecastActivity">
+
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/city_name"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg2"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="City Name"
+        android:textColor="#ffff"/>
+
+
+
+    <include
+        android:id="@+id/today"
+        layout="@layout/forecast_item_inc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city_name" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:id="@+id/forecast_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#050F44"
+        android:padding="8dp"
+        android:textColor="#e57589"
+        android:gravity="center"
+        android:text="3 Day Forecast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/today" />
+
+    <TextView
+        android:textColor="#fff"
+        android:id="@+id/header_one"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg2"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forecast_header"
+        tools:text="Tomorrow" />
+
+    <include
+        android:id="@+id/one"
+        layout="@layout/forecast_item_inc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_one" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:textColor="#fff"
+        android:id="@+id/header_two"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg2"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/one"
+        tools:text="One day after tomorrow" />
+
+    <include
+        android:id="@+id/two"
+        layout="@layout/forecast_item_inc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_two" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:textColor="#fff"
+        android:id="@+id/header_three"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg2"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/two"
+        tools:text="Two days after tomorrow " />
+
+    <include
+        android:id="@+id/three"
+        layout="@layout/forecast_item_inc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_three" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/reset"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
